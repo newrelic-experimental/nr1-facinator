@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "Mon Jun 08 2020 17:01:08 GMT+0000 (Coordinated Universal Time)",
+  "lastUpdated": "Fri Nov 20 2020 15:11:45 GMT+0000 (Coordinated Universal Time)",
   "projectName": "nr1-facinator",
   "projectUrl": "https://github.com/newrelic-experimental/nr1-facinator",
   "includeDev": true,
@@ -15,26 +15,26 @@
       "licenseUrl": "https://github.com/facebook/prop-types/blob/v15.7.2/LICENSE",
       "licenseTextSource": "file"
     },
-    "react-dom@16.12.0": {
+    "react-dom@16.14.0": {
       "name": "react-dom",
-      "version": "16.12.0",
+      "version": "16.14.0",
       "range": "^16.6.3",
       "licenses": "MIT",
       "repoUrl": "https://github.com/facebook/react",
-      "versionedRepoUrl": "https://github.com/facebook/react/tree/v16.12.0",
+      "versionedRepoUrl": "https://github.com/facebook/react/tree/v16.14.0",
       "licenseFile": "node_modules/react-dom/LICENSE",
-      "licenseUrl": "https://github.com/facebook/react/blob/v16.12.0/LICENSE",
+      "licenseUrl": "https://github.com/facebook/react/blob/v16.14.0/LICENSE",
       "licenseTextSource": "file"
     },
-    "react@16.12.0": {
+    "react@16.14.0": {
       "name": "react",
-      "version": "16.12.0",
+      "version": "16.14.0",
       "range": "^16.6.3",
       "licenses": "MIT",
       "repoUrl": "https://github.com/facebook/react",
-      "versionedRepoUrl": "https://github.com/facebook/react/tree/v16.12.0",
+      "versionedRepoUrl": "https://github.com/facebook/react/tree/v16.14.0",
       "licenseFile": "node_modules/react/LICENSE",
-      "licenseUrl": "https://github.com/facebook/react/blob/v16.12.0/LICENSE",
+      "licenseUrl": "https://github.com/facebook/react/blob/v16.14.0/LICENSE",
       "licenseTextSource": "file"
     }
   },

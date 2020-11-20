@@ -60,7 +60,7 @@ SOFTWARE.
 
 ### react-dom
 
-This product includes source derived from [react-dom](https://github.com/facebook/react) ([v16.12.0](https://github.com/facebook/react/tree/v16.12.0)), distributed under the [MIT License](https://github.com/facebook/react/blob/v16.12.0/LICENSE):
+This product includes source derived from [react-dom](https://github.com/facebook/react) ([v16.14.0](https://github.com/facebook/react/tree/v16.14.0)), distributed under the [MIT License](https://github.com/facebook/react/blob/v16.14.0/LICENSE):
 
 ```
 MIT License
@@ -89,7 +89,7 @@ SOFTWARE.
 
 ### react
 
-This product includes source derived from [react](https://github.com/facebook/react) ([v16.12.0](https://github.com/facebook/react/tree/v16.12.0)), distributed under the [MIT License](https://github.com/facebook/react/blob/v16.12.0/LICENSE):
+This product includes source derived from [react](https://github.com/facebook/react) ([v16.14.0](https://github.com/facebook/react/tree/v16.14.0)), distributed under the [MIT License](https://github.com/facebook/react/blob/v16.14.0/LICENSE):
 
 ```
 MIT License
