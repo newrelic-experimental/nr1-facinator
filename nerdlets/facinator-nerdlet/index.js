@@ -184,7 +184,7 @@ export default class FacinatorNerdletNerdlet extends React.Component {
                             placeholder="e.g appName"
                         />
                         <br /><br />
-                        <h3  className="midFormh3">Optional settings:</h3>
+                        <h3  className="midFormh3">Optional settings</h3>
                         <hr />
                         <div className="formIntro">Some additional configuration options.</div>
                         <h4>Exclude facets</h4>
