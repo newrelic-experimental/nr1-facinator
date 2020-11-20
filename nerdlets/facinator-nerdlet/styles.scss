@@ -72,6 +72,7 @@ hr {
 }
 .formSection {
     background-color: white;
+    width: 90%;
     padding: 1em;
     form {
         margin-top:1em;
@@ -79,7 +80,27 @@ hr {
     pre {
         color: #308eaa;
     }
-    div.formIntro {color: grey;}
+    div.formIntro {
+        margin-top:0.5em;
+    }
+
+
+    h4 { 
+        margin-top: 1.5em;
+        font-size:1.2em;
+    }
+
+    p.fieldExplanation {
+        margin-top: 0.5em;
+        color:#7e7e7e;
+    }
+    h3 {
+        font-size:1.6em;
+
+    }
+    h3.midFormh3 {
+        margin-top: 1em;
+    }
 }
 
 .tabbedPanel {
@@ -89,4 +110,10 @@ hr {
 .dataWaiting {
 
     color:grey;
+}
+
+.fullWidthInput {
+    width: 100%;
+    margin-top: 1em;
+    background-color:#f5f5f5;
 }
