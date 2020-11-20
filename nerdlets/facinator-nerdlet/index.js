@@ -11,7 +11,7 @@ export default class FacinatorNerdletNerdlet extends React.Component {
             this.setState({
                 formData: {
                     accountId: (data.length > 0) ? data[0].id+"" : "1",
-                    query: "from Transaction",
+                    query: "from Transaction since 10 minutes ago",
                     exclude: "timestamp,another_facet",
                     threshold: "50",
                     bucketSize: "auto",
@@ -128,66 +128,83 @@ export default class FacinatorNerdletNerdlet extends React.Component {
 
 
         let form = <div className="formSection">
-                    <h3>Configuration</h3>
-                    <div className="formIntro">Specify a query omitting the <strong>SELECT</strong> component and any <strong>TIMESERIES</strong> or <strong>FACET</strong> clauses. You can ajust the threshold under which the facets are automatically charted and also configure the size of buckets and number of groups rendered.
-                    
-                    <br /><br />For Example: <pre>from Transaction where appName='MyAppName'</pre></div>
                     {/* <form onSubmit={(this.formSubmit)}> */}
-                    <form onSubmit={(e)=>{e.preventDefault()}}>
-                        <TextField
-                            label="Query"
+                    <form onSubmit={(e)=>{e.preventDefault()}} >
+                        <h3>Data source</h3>
+                         <hr />
+                        <h4>Query</h4>
+                        <p className="fieldExplanation">Specify an NRQL query but omit the <strong>SELECT</strong> keyword and any <strong>TIMESERIES</strong> or <strong>FACET</strong> clauses. You can filter using <strong>WHERE</strong> and <strong>SINCE</strong> clauses as usual to reduce the data being examined.</p>
+                        <br />For Example: <pre>from Transaction where appName='MyAppName'</pre>
+                        <TextField className="fullWidthInput" 
                             value={formData.query}
                             onChange={(e)=>{this.handleChange('query',e.target.value)}}
                         />
-                        <TextField
-                            label="Aggregator function"
+                        
+                        <h4>Aggregator function</h4>
+                        <p className="fieldExplanation">The aggregator function is the function used to plot the facet charted in the details tab. By default this is count(*) but you could use another function such as percentile(duration,90). You may supply more than one aggretor function, sereperated by commas just as you would i nthe NRQL query.</p>
+                        <TextField className="fullWidthInput" 
                             value={formData.aggregator}
                             onChange={(e)=>{this.handleChange('aggregator',e.target.value)}}
                         />
-                        <TextField
-                            label="Account ID"
+                        
+                        <h4>Account ID</h4>
+                        <p className="fieldExplanation">The account ID will be populated automatically. If you have access to more than one account you may need t supply the right one here.</p>
+                        <TextField className="fullWidthInput" 
                             value={formData.accountId}
                             onChange={(e)=>{this.handleChange('accountId',e.target.value)}}
                         />
-                        <TextField
-                            label="Facet groups threshold"
+                         
+                        <h4>Facet render threshold</h4> 
+                        <p className="fieldExplanation">This threshold determines how many unique values of a given facet are allowed before the chart is skipped.  For example if the threshold is 50 then if a facet returns more than 50 unique values it will not render in the details pane. You can also toggle this using the 'show disabled facets' at the bottom.</p>
+                        <TextField className="fullWidthInput" 
                             value={formData.threshold}
                             onChange={(e)=>{this.handleChange('threshold',e.target.value)}}
                         />
+                         
                         <br /><br />
-                        <h4>Explore settings:</h4>
+                        <h3 className="midFormh3">Explore settings</h3>
                         <hr />
-                        <div className="formIntro">The explore tab will display each facet with the aggregator function(s) defined here applied. Use the token $FIELD$ to represent the current facet. You may supply further facets to facet by aswell. 
-                        <br /><br />For Example: <pre>average($FIELD$)</pre></div>
+                        <div className="formIntro">These settings affect the 'Explore' tab only.</div>
                         <br />
-                        <TextField
-                            label="Explore aggregator function "
+
+                        <h4>Explore tab aggregator function</h4>
+                        <p className="fieldExplanation">The explore tab will display each using the aggregator function(s) defined here applied. Use the token $FIELD$ to represent the current facet. You may supply further facets to facet by aswell.</p>
+                        <br />For Example: <pre>average($FIELD$)</pre>
+                        <TextField className="fullWidthInput" 
                             value={formData.exploreAggregator}
                             onChange={(e)=>{this.handleChange('exploreAggregator',e.target.value)}}
                             placeholder="e.g average($FIELD$)"
                         />
-                        <TextField
-                            label="Explore facets"
+
+                        <h4>Explore facets</h4>
+                        <p className="fieldExplanation">Provide the facets you wish to facet by. Comma seperated.</p>
+                        <TextField className="fullWidthInput" 
                             value={formData.exploreFacets}
                             onChange={(e)=>{this.handleChange('exploreFacets',e.target.value)}}
                             placeholder="e.g appName"
                         />
                         <br /><br />
-                        <h4>Optional settings:</h4>
+                        <h3  className="midFormh3">Optional settings:</h3>
                         <hr />
-                        <br />
-                        <TextField
-                            label="Exclude facets"
+                        <div className="formIntro">Some additional configuration options.</div>
+                        <h4>Exclude facets</h4>
+                        <p className="fieldExplanation">A comma seperated of facets to exclude</p>
+                        <TextField className="fullWidthInput" 
                             value={formData.exclude}
                             onChange={(e)=>{this.handleChange('exclude',e.target.value)}}
                         />
-                        <TextField
-                            label="Bucket size"
+                        
+                        <h4>Bucket size</h4>
+                        <p className="fieldExplanation">The size of the buckets on the line charts.</p>
+                        <TextField className="fullWidthInput" 
                             value={formData.bucketSize}
                             onChange={(e)=>{this.handleChange('bucketSize',e.target.value)}}
                         />
-                        <TextField
-                            label="Number of facets on graph"
+
+
+                        <h4>Facets per chart</h4>
+                        <p className="fieldExplanation">The number of facets to include on charts.</p>
+                        <TextField className="fullWidthInput" 
                             value={formData.numFacets}
                             onChange={(e)=>{this.handleChange('numFacets',e.target.value)}}
                         />
