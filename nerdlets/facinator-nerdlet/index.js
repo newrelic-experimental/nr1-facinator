@@ -346,7 +346,7 @@ export default class FacinatorNerdletNerdlet extends React.Component {
                         
 
                         return <div key={idx} className="detailRow">
-                            <h3 id={facet} ><Icon sizeType={Icon.SIZE_TYPE.MEDIUM} type={Icon.TYPE.DATAVIZ__DATAVIZ__DASHBOARD} /> {facet} 
+                            <h3 id={facet} ><Icon type={Icon.TYPE.DATAVIZ__DATAVIZ__DASHBOARD} /> {facet} 
                             <span className="tinyLabel">records</span>{facetSummaryData[facet]}  
                             <span className="tinyLabel">coverage</span>{percent.toFixed(2)}%</h3>
                             <pre>{graphquery}</pre>
@@ -380,7 +380,7 @@ export default class FacinatorNerdletNerdlet extends React.Component {
                         
 
                         return <div key={idx} className="detailRow">
-                            <h3 id={facet} ><Icon sizeType={Icon.SIZE_TYPE.MEDIUM} type={Icon.TYPE.DATAVIZ__DATAVIZ__DASHBOARD} /> {facet} 
+                            <h3 id={facet} ><Icon type={Icon.TYPE.DATAVIZ__DATAVIZ__DASHBOARD} /> {facet} 
                             <span className="tinyLabel">records</span>{facetSummaryData[facet]}  
                             <span className="tinyLabel">cardinality</span>{percent.toFixed(2)}%</h3>
                             <pre>{graphquery}</pre>
